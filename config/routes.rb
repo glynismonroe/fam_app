@@ -1,6 +1,10 @@
 Rails.application.routes.draw do 
+  resources :posts
   devise_for :users
   get 'home/about'
+  get 'fusion', to: 'home#fusion'
+  get 'chat', to: 'home#chat'
+  get 'blog', to: 'home#blog'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

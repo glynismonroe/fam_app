@@ -5,20 +5,22 @@
 
 <p>"Celebrating families all over the world... by connecting through history, heritage and lineage."</p>
 
-       
-
+      
 <%= @hello %>
 
 <div class="form-group">
   <div class="btn-group btn-group-justified" role="group" aria-label="...">
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-primary">FrappFusion</button>
+      <!--<button type="button" class="btn btn-primary">FrappFusion</button>-->
+      <%= link_to 'FrappFusion', fusion_path, class: "btn btn-primary"  %>
     </div>
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-success">FrappChat</button>
+      <!--<button type="button" class="btn btn-success">FrappChat</button>-->
+      <%= link_to 'FrappChat', chat_path, class: "btn btn-success"  %>
     </div>
     <div class="btn-group" role="group">
-      <button type="button" class="btn btn-info">FrappBlog</button>
+      <!--<button type="button" class="btn btn-info">FrappBlog</button>-->
+      <%= link_to 'FrappBlogg', blog_path, class: "btn btn-info"  %>
     </div>
   </div>
 </div>

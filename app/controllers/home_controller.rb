@@ -8,5 +8,11 @@ class HomeController < ApplicationController
   
   def fusion
   end
+  
+  def chat
+  end
+  
+  def blog
+  end
 
 end
