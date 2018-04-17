@@ -11,6 +11,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'imagemagick-identify'
+gem 'paperclip', '~> 6.0'
+gem 'identify', '~> 0.1.1'
 
 
 group :development, :test do
@@ -21,4 +24,5 @@ group :development do
    gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
 

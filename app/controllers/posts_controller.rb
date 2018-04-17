@@ -7,6 +7,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
+    # @post_img = @posts.
   end
 
  
@@ -62,7 +63,7 @@ private
     end
 
     def post_params
-      params.required(:post).permit(:body)
+      params.required(:post).permit(:body, :image)
     end
 
   def correct_user
