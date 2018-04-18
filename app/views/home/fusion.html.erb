@@ -3,10 +3,29 @@
 <h1> FrappFusion </h1> 
 
 
-<div class="panel panel-default">
-  <div class="panel-body">
-   A fusion of fun...detailing all the cultural events for family activities.
-  </div>
-</div>
-<div "panel-primary-heading-bg" </div>
-
+    <div class="panel panel-default">
+      <div class="panel-body">
+       A fusion of fun...detailing all the cultural events for family activities.
+      </div>
+    
+    <div  class= "panel-primary-heading-bg">
+        </div>
+    </div>
+    
+    <body>
+      <!--<nav class="navbar navbar-inverse">-->
+        <!--<div class="container">-->
+          <div class="navbar-header">
+            <!--<%= link_to 'FrappBlogg', blog_path, class: "btn btn-success"  %>-->
+          </div>
+          <ul class="nav navbar-nav">
+            <% if user_signed_in? %>
+              <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+              <li><%= link_to 'Your Conversations', conversations_path %></li>
+              <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <!--<li><%= link_to 'Log In', new_user_session_path, class: "btn btn-primary"  %></li>-->
+            <% end %>
+          </ul>
+        </div>
+    </body>
