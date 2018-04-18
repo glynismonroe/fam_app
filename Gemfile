@@ -14,13 +14,8 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'imagemagick-identify'
 gem 'paperclip', '~> 6.0'
 gem 'identify', '~> 0.1.1'
-<<<<<<< HEAD
 gem 'mailboxer'
-
-
-=======
 gem 'activeadmin'
->>>>>>> 851e756313fa57fa5e640e342e3b25f4c77d21e9
 
 group :development, :test do
   gem 'byebug'
