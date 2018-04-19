@@ -1,4 +1,4 @@
-Rails.application.routes.draw do 
+Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'fusion', to: 'home#fusion'
   get 'chat', to: 'home#chat'
   get 'blog', to: 'home#blog'
+  get 'maps', to: 'home/maps#maps'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
