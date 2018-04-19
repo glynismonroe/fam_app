@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180418221746) do
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -46,8 +45,6 @@ ActiveRecord::Schema.define(version: 20180418221746) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
-=======
-ActiveRecord::Schema.define(version: 20180418020154) do
 
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id"
@@ -104,7 +101,6 @@ ActiveRecord::Schema.define(version: 20180418020154) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id"
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type"
->>>>>>> 9e476ae98d4fbe334395839b6a4847ddae681d5a
 
   create_table "posts", force: :cascade do |t|
     t.string   "body"
