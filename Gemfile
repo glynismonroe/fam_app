@@ -14,6 +14,7 @@ gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'imagemagick-identify'
 gem 'paperclip', '~> 6.0'
 gem 'identify', '~> 0.1.1'
+gem 'mailboxer'
 gem 'activeadmin'
 
 group :development, :test do

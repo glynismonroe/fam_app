@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts
+  resources :conversations, only: [:index, :show, :destroy]
   devise_for :users
   get 'home/about'
   get 'fusion', to: 'home#fusion'
