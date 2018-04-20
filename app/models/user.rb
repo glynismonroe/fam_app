@@ -9,3 +9,11 @@ class User < ActiveRecord::Base
   
 end
 
+ def name
+   "User #{id}"
+ end
+ 
+ def mailboxer_email(object)
+   nil
+ end
+ 
