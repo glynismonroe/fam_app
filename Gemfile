@@ -16,6 +16,7 @@ gem 'paperclip', '~> 6.0'
 gem 'identify', '~> 0.1.1'
 gem 'mailboxer'
 gem 'activeadmin'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug'
