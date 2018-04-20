@@ -21,7 +21,10 @@ class PostsController < ApplicationController
   end
 
  
-  def edit
+  def
+  
+   edit
+   
   end
 
  
@@ -44,9 +47,10 @@ class PostsController < ApplicationController
     end
   
   def update
+     
     if @post.update(post_params)
         redirect_to @post, notice: 'Post was sucessfully updated'.
-      else
+    else
         render action: 'edit'
     end
   end
