@@ -91,6 +91,7 @@ GEM
     geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    gravatar_image_tag (1.2.0)
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
@@ -245,6 +246,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise (~> 4.4, >= 4.4.3)
   geocoder
+  gravatar_image_tag
   identify (~> 0.1.1)
   imagemagick-identify
   jbuilder (~> 2.0)

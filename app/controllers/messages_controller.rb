@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   
     before_action :set_conversation 
+    respond_to :html, :js
 
     def create 
         receipt = current_user.reply_to_conversation(@conversation, body)

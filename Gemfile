@@ -17,6 +17,8 @@ gem 'identify', '~> 0.1.1'
 gem 'mailboxer'
 gem 'activeadmin'
 gem 'geocoder'
+gem 'gravatar_image_tag'
+
 
 group :development, :test do
   gem 'byebug'
