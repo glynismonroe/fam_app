@@ -17,12 +17,14 @@ gem 'identify', '~> 0.1.1'
 gem 'mailboxer'
 gem 'activeadmin'
 gem 'geocoder'
-
 group :development, :test do
   gem 'byebug'
+  gem "nifty-generators"
 end
 
 group :development do
    gem 'web-console', '~> 2.0'
   gem 'spring'
 end
+
+gem 'mocha', group: :test
