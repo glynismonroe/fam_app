@@ -18,3 +18,21 @@
 
 <%= link_to "New Conversation", new_conversation_path %>
 
+<% page_header "Conversation" %>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><%= @conversation.subject %></div>
+
+  <div class="panel-body">
+    <div class="messages">
+      <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <% message = receipt.message %>
+
+        <%= message.sender.name %>
+          says at <%= message.created_at.strftime("%-d %B %Y, %H:%M:%S") %>
+        <%= message.body %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
