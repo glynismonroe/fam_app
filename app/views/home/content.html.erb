@@ -1,1 +1,35 @@
 
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    ...
+  </div>
+</div>
+<div>
+ <%= link_to 'FrappChat', chat_path, class: "btn btn-success"  %>
+ <%= link_to 'FrappBlogg', blog_path, class: "btn btn-info"  %></div>
+ </div>
+ 
+ <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About Frapp", home_about_path %></li>
+        
+        <% if user_signed_in? %>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "Edit Profile",  edit_user_registration_path %></li>
+        <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+        <% end %>
+       
+</div>
+ </div>

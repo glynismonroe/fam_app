@@ -102,7 +102,7 @@ class ConversationsController < ApplicationController
   
   before_filter :authenticate_user!
   before_filter :get_mailbox, :get_box, :get_actor
-  before_filter :check_current_subject_in_conversation, :only => [:show, :update, :destroy]
+  before_filter :check_current_user_in_conversation, :only => [:show, :update, :destroy]
 
   def index
     if @box.eql? "inbox"
@@ -130,7 +130,7 @@ class ConversationsController < ApplicationController
 
   def update
     if params[:untrash].present?
-    @conversation.untrash(@actor)
+    @conversation.untrash(@user)
     end
 
     if params[:reply_all].present?
@@ -173,11 +173,11 @@ class ConversationsController < ApplicationController
   private
 
   def get_mailbox
-    @mailbox = current_actor.mailbox
+    @mailbox = current_user.mailbox
   end
 
-  def get_actor
-    @actor = Actor.normalize(current_subject)
+  def get_user
+    @actor = User.normalize(current_user)
   end
 
   def get_box
@@ -188,7 +188,7 @@ class ConversationsController < ApplicationController
     @box = params[:box]
   end
 
-  def check_current_subject_in_conversation
+  def check_current_user_in_conversation
     @conversation = Conversation.find_by_id(params[:id])
 
     if @conversation.nil? or !@conversation.is_participant?(@actor)
