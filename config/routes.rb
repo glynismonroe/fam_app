@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts
-  resources :conversations, only: [:index, :show, :destroy]
+  resources :messages, only: [:new, :create]
   resources :messages
   devise_for :users
   get 'home/about'
@@ -11,6 +11,34 @@ Rails.application.routes.draw do
   get 'blog', to: 'home#blog'
   get 'maps', to: 'home/maps#maps'
   root 'home#index'
+  
+  
+  
+resources :conversations, only: [:index, :show, :destroy] do
+  member do
+    post :reply
+  end
+end
+
+resources :conversations, only: [:index, :show, :destroy] do
+  user do
+    post :restore
+  end
+end
+
+resources :conversations, only: [:index, :show, :destroy] do
+  collection do
+    delete :empty_trash
+  end
+end
+
+# resources :conversations, only: [:index, :show, :destroy] do
+#   users  do
+#     post :mark_as_read
+#   end
+# end
+
+# resources :users, only: [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

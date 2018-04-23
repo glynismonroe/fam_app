@@ -18,6 +18,8 @@ gem 'identify', '~> 0.1.1'
 gem 'mailboxer'
 gem 'activeadmin'
 gem 'geocoder'
+gem 'chosen-rails'
+
 
 
 group :development, :test do
