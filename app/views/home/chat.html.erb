@@ -11,7 +11,10 @@
   <!--<nav class="navbar navbar-inverse">-->
     <!--<div class="container">-->
       <div class="navbar-header">
-        <!--<%= link_to 'FrappChat', chat_path, class: "btn btn-success"  %>-->
+        <%= link_to 'FrappChat', chat_path, class: "btn btn-success"  %>
+        <%= link_to 'FrappBlogg', blog_path, class: "btn btn-info"  %></div>
+      </div>
+            
       </div>
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
@@ -19,7 +22,7 @@
           <li><%= link_to 'Your Conversations', conversations_path %></li>
           <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'Log In', new_user_session_path, class: "btn btn-success"  %></li>
+          <!--<li><%= link_to 'Log In', new_user_session_path, class: "btn btn-success"  %></li>-->
         <% end %>
       </ul>
     </div>
