@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'fusion', to: 'home#fusion'
   get 'chat', to: 'home#chat'
   get 'blog', to: 'home#blog'
+  get 'frapp_talk', to: 'home#blog'
   get 'maps', to: 'home/maps#maps'
   get 'content', to: 'home#chat'
   root 'home#index'

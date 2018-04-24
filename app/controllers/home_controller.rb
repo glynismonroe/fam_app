@@ -14,6 +14,9 @@ class HomeController < ApplicationController
 
   def blog
   end
+  
+  def frapp_talk
+  end
 
   def maps
   end

@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import 'bootstrap';
+@import 'bootstrap/theme';
+@import 'chosen';
+
+.jumbotron {
+    background-image: url("https://source.unsplash.com/random/1200x800") !important;
+    color: white !important;
+}

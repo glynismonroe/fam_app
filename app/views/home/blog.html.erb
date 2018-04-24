@@ -12,17 +12,20 @@
     <!--<div class="container">-->
       <div class="navbar-header">
         <%= link_to 'FrappChat', chat_path, class: "btn btn-success"  %>
-        <%= link_to 'FrappBlogg', blog_path, class: "btn btn-info"  %></div>
-      </div>
+        <%= link_to 'FrappBlogg', blog_path, class: "btn btn-info"  %>
+      
+<div>
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
           <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
           <li><%= link_to 'Your Blogg!', conversations_path %></li>
-          <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+          <!--<li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>-->
         <% else %>
           <!--<li><%= link_to 'Log In', new_user_session_path, class: "btn btn-info"  %></li>-->
         <% end %>
+ </div>
+</div>
+
       </ul>
-    </div>
   </nav>
 </body>

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
-    # @post_img = @posts.
+    @post_img = @posts
   end
 
  
@@ -60,20 +60,20 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
   
-
 private
     def set_post
       @post = Post.find(params[:id])
     end
 
     def post_params
-      params.required(:post).permit(:body, :image)
+      params.required(:post).permit(:body, :image, :name)
     end
 
-  def correct_user
+    def correct_user
       @post = current_user.posts.find_by(id: params[:id])
       redirect_to posts_path, notice: "Not authorized to edit this post." if @post.nil?
-  
-  end
+    end
 
 end
+
+ 
