@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :posts
-
 end
 
  def name
@@ -19,10 +18,26 @@ end
 
 def new
     @recipients = User.all - [current_user]
-end 
+end
 
 def create
     recipient = User.find(params[:user_id])
     receipt = current_user.send_message(recipient, params[:body], params[:subject])
     redirect_to conversation_path(receipt.conversation)
+end
+
+def address
+
+end
+
+def city
+
+end
+
+def state
+
+end
+
+def zip
+
 end

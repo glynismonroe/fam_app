@@ -17,21 +17,25 @@
           <%= f.label :email %><br/>
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
         </div>
-
-        <!-- <div class="form-group">
+        
+        <div class="form-group">
           <%= f.label :address %><br/>
-          <%= f.address_field :address, autofocus: true, autocomplete: "address", class: "form-control" %>
+          <%= f.text_field :address, autofocus: true, autocomplete: "address", class: "form-control" %>
         </div>
 
         <div class="form-group">
           <%= f.label :city %><br/>
-          <%= f.city_field :city, autofocus: true, autocomplete: "city", class: "form-control" %>
+          <%= f.text_field :city, autofocus: true, autocomplete: "city", class: "form-control" %>
         </div>
 
         <div class="form-group">
           <%= f.label :state %><br/>
-          <%= f.state_field :state, autofocus: true, autocomplete: "state", class: "form-control" %>
-        </div> -->
+          <%= f.text_field :state, autofocus: true, autocomplete: "state", class: "form-control" %>
+        </div>
+<div class="form-group">
+  <%= f.label :zip %><br/>
+  <%= f.text_field :zip, autofocus: true, autocomplete: "zip", class: "form-control" %>
+</div>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for:
