@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'maps/google_maps'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :posts
