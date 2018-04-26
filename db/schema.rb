@@ -140,11 +140,13 @@ ActiveRecord::Schema.define(version: 20180424080352) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "city"
-    t.string   "name"
     t.integer  "privacy"
     t.string   "state"
     t.integer  "zip"
-    t.binary   "avatar"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.float    "Ip"
   end
 

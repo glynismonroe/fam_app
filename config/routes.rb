@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'events/upcoming'
+
+  get 'events/past'
+
   get 'maps/google_maps'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
