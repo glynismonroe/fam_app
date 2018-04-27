@@ -2,53 +2,23 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  */
-
-@import 'bootstrap';
-@import 'bootstrap/theme';
-@import 'chosen';
-
-.jumbotron {
-    background-image: url("https://source.unsplash.com/random/1200x800") !important;
-    color: white !important;
-}
-
-.iframe {
-    width: 90%;
-    height: 90%;
-    background-image: url("map-image.png");
-}
-ul.social-buttons {
-  margin-bottom: 0;
-  li {
-    a {
-      font-size: 20px;
-      line-height: 40px;
-      display: block;
-      width: 40px;
-      height: 40px;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      color: white;
-      border-radius: 100%;
-      outline: none;
-      background-color: #898989;
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: #f2f3f4;
-      }
-    }
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  text-shadow: 2px 2px rgba(#322f2f, 0.6);
 }
